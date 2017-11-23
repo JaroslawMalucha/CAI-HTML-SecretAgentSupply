@@ -39,13 +39,14 @@ header .logo img {
     height: 25rem;
     background:url("../img/moto.jpeg") no-repeat;
     background-size: cover;
+    padding-top:9rem;
 }
 
 .banner .box {
     background-color: black;
     color: white;
     width: 20rem;
-    margin-top: 9rem;
+    /*margin-top: 9rem;*/
     padding: 2rem 3rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -69,8 +70,15 @@ nav {
 nav .container {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-around; 
 }
+
+nav .tablet {
+    display: none;
+}
+
+
+
 
 nav span {
     padding: 0.75rem;
@@ -92,7 +100,8 @@ main {
 main .products {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
+    
 }
 
 main .products .product {
@@ -125,6 +134,7 @@ main .contacts {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     margin-top: 3rem;
     margin-bottom: 4rem;
     
@@ -151,4 +161,80 @@ footer {
     display: flex;
     align-items: center;
 }
+
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+
+    nav .desktop {
+        display: none;
+    }
+
+    nav .tablet {
+        display: block;
+    }
+
+    main .products .product {
+        width: 47%;
+    }
+    main .products .product:nth-child(3) {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 470px) {
+    .banner {
+        height: 15rem;
+    }
+    .banner .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    .banner .box {
+        /*margin-top: 10rem;*/
+        padding: 1rem 2rem;
+        width: 100%;
+    }
+
+    .banner .box p.one {
+        margin-bottom:0.25rem;
+        font-size: 0.77rem;
+    }
+    
+    .banner .box p.two {
+        font-size: 1rem;
+    }
+
+    main .products {
+        align-items: center;
+        justify-content: center;
+    }
+    main .products .product {
+        width: 90%;
+    }
+    main .products .product:nth-child(2) {
+        display: none;
+    }
+
+    main .contacts {
+        flex-direction:column;
+    }
+
+    main .contacts .contact {
+        margin: 10px;
+        width: 90%;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+
 
